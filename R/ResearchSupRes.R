@@ -1,6 +1,6 @@
 #Function that researches the Support and Resistant levels
 
-ResearchSupResFUN<-function(OHLC_Data, Delta) {
+ResearchSupRes<-function(OHLC_Data, Delta) {
   OHLC_Data$Bullish<- Cl(OHLC_Data)>=Op(OHLC_Data)
   MaxVal<-max(Hi(OHLC_Data))+Delta
   MinVal<-min(Lo(OHLC_Data))-Delta
