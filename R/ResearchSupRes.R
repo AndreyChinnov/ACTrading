@@ -25,7 +25,7 @@ ResearchSupRes<-function(OHLC_Data, Delta, Error=0) {
     N_rev_B<-sum(OHLC_Data[WhichReverse]$Bullish)
     
     WhichReverseNearBy<- !((Cl(OHLC_Data)>p+Delta & Op(OHLC_Data)<p) |
-                       (Cl(OHLC_Data)<p & Op(OHLC_Data)>p+Delta))& WhichInside & WhichNearBy
+                       (Cl(OHLC_Data)<p & Op(OHLC_Data)>p+Delta)) & WhichNearBy
     
     N_rev_NearBy<-sum(WhichReverseNearBy)
     N_rev_all<-N_rev+N_rev_NearBy
