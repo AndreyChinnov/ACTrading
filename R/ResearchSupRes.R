@@ -23,7 +23,9 @@ ResearchSupRes<-function(OHLC_Data, Delta) {
     N_rev<-sum(WhichReverse)
     N_rev_B<-sum(OHLC_Data[WhichReverse]$Bullish)
     p_value<-(2*p+Delta)/2
-    newDF<-data.frame(p_value, N_cand, N_cand_B, N_rev, N_rev_B)
+    p_start<-p
+    p_end<-p+Delta
+    newDF<-data.frame(p_start,p_end,p_value, N_cand, N_cand_B, N_rev, N_rev_B)
     row.names(newDF)<-paste(as.character(p),as.character(p+Delta),sep="-")
     DF<-rbind(DF,newDF)
     p<-p+Delta
