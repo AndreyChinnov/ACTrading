@@ -5,7 +5,7 @@
 hello()
 }
 \description{
-Prints 'Hello, world!'. Test +2
+Prints 'Hello, world!'. Test +3
 }
 \examples{
 hello()
